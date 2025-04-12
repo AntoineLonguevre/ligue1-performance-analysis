@@ -1,0 +1,41 @@
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Environnements virtuels
+venv/
+env/
+.venv/
+.env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+*.temp
+
+# Données sensibles ou lourdes
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.h5
+*.zip
+*.gz
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Fichiers générés par VSCode
+.vscode/
+*.code-workspace
