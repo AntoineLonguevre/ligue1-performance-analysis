@@ -76,7 +76,7 @@ Main predictive features: `GF_per_MP`, `CS%`, and `Poss`.
 We generate Top 3 probability scores per club-season.  
 This helps identify:
 - Overperformers (e.g., Monaco 2016–17, Lille 2020–21)
-- Underperformers by model expectation
+- Underperformers by model expectation (e.g., Rennes 2021-22, Marseille 2017-18)
 
 ---
 
