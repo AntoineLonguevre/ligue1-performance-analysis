@@ -135,28 +135,3 @@ Possible next steps:
 | `Subs`     | Games played as substitute |
 | `Min`      | Total minutes played |
 
----
-
-## 🛠️ How to Add This to Your Git Project
-
-1. Create a Git repository (if not already done):
-
-```bash
-git init
-```
-
-2. Save this README as `README.md` in your project root.
-
-3. Add and commit it to Git:
-
-```bash
-git add README.md
-git commit -m "Add project documentation"
-```
-
-4. (Optional) Push to GitHub:
-
-```bash
-git remote add origin https://github.com/your-username/your-repo.git
-git push -u origin main
-```
