@@ -1,6 +1,6 @@
 # ⚽ Ligue 1 Club Performance Analysis (2015–2024)
 
-This project provides an exploratory data analysis (EDA) of club-level performance in Ligue 1 over nine seasons (2015–2024).  
+This project provides an exploratory data analysis (EDA) of club-level performance in Ligue 1 over ten seasons (2014–2024).  
 The dataset aggregates season-level statistics per team and focuses on identifying the statistical drivers of success, consistency, and over/underperformance.
 
 ---
