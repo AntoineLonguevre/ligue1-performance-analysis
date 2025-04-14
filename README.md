@@ -1,6 +1,10 @@
-# ⚽ Ligue 1 Club Performance Analysis (2015–2024)
+# ⚽ Ligue 1 Club Performance Analysis (2014–2024)
 
-This project provides an exploratory data analysis (EDA) of club-level performance in Ligue 1 over nine seasons (2015–2024).  
+This project provides an exploratory data analysis (EDA) of club-level performance in Ligue 1 over ten seasons (2014–2024).  
+
+# ⚽ Ligue 1 Club Performance Analysis (2014–2024)
+
+This project provides an exploratory data analysis (EDA) of club-level performance in Ligue 1 over ten seasons (2014–2024).  
 The dataset aggregates season-level statistics per team and focuses on identifying the statistical drivers of success, consistency, and over/underperformance.
 
 ---
@@ -76,7 +80,8 @@ Main predictive features: `GF_per_MP`, `CS%`, and `Poss`.
 We generate Top 3 probability scores per club-season.  
 This helps identify:
 - Overperformers (e.g., Monaco 2016–17, Lille 2020–21)
-- Underperformers by model expectation
+- Underperformers by model expectation (e.g., Rennes 2021-22, Marseille 2017-18)
+
 
 ---
 
@@ -135,28 +140,3 @@ Possible next steps:
 | `Subs`     | Games played as substitute |
 | `Min`      | Total minutes played |
 
----
-
-## 🛠️ How to Add This to Your Git Project
-
-1. Create a Git repository (if not already done):
-
-```bash
-git init
-```
-
-2. Save this README as `README.md` in your project root.
-
-3. Add and commit it to Git:
-
-```bash
-git add README.md
-git commit -m "Add project documentation"
-```
-
-4. (Optional) Push to GitHub:
-
-```bash
-git remote add origin https://github.com/your-username/your-repo.git
-git push -u origin main
-```
