@@ -64,30 +64,29 @@ jupyter notebook notebooks/Project_1_Ligue1_documented.ipynb
 
 Here are some of the visual deliverables and insights included:
 
-- 📈 **Points per match evolution** by club type (always present vs. promoted).### 📈 Points per Match: Stable Clubs vs Promoted/Relegated Teams
+- 📈 **Points per match evolution** by club type (always present vs. promoted).
 
 This plot highlights the structural gap in performance between clubs that remained in Ligue 1 throughout the decade and those that were promoted or relegated.
 
 ![Points per game comparison](figures/points_by_club_type.png)
 
-- 📉 **Goal difference trends**, penalty dependency, and club efficiency profiles.
 - ### 🎯 Predicting Top 3 Finishes – Random Forest
 
-The model assigns a probability of finishing in the Top 3 to every team-season based on performance stats. Some surprises emerge, like underestimation of Lille 20-21 or Monaco 16-17.
+The model assigns a probability of finishing in the Top 3 to every team-season based on performance stats. 
 
-![Top 3 RF Ranking](figures/top3_probability_ranking.png)
+![Top 3 RF Ranking](figures/top_3_probability_ranking.png)
 
-- ### 🧠 Team Profiles: Radar Comparison (PSG, Lyon, Monaco...)
+- ### 🧠 Team Profiles: Radar Comparison
 
 Radar charts show performance on key dimensions (goals scored/conceded, possession, clean sheets). PSG dominates across the board, while other top teams show more varied profiles.
 
-![Radar PSG](figures/radar_psg.png)
+![Radar PSG](figures/radar_mult_club.png)
 
 - ### ⚖️ Efficiency Grid: Offensive vs Defensive Strength
 
 This scatterplot combines normalized offensive and defensive indicators. It reveals teams that are strong in both areas — or unbalanced.
 
-![Efficiency grid](figures/offense_vs_defense.png)
+![Efficiency grid](figures/offence_vs_defence.png)
 
 - ### 🎯 Penalty Dependency Ratio
 
