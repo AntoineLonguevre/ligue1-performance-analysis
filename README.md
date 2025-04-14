@@ -1,138 +1,123 @@
-# ⚽ Ligue 1 Club Performance Analysis (2014–2024)
+# 📊 Ligue 1 Performance Analysis (2014–2024)
 
-This project provides an exploratory data analysis (EDA) of club-level performance in Ligue 1 over ten seasons (2014–2024).  
-The dataset aggregates season-level statistics per team and focuses on identifying the statistical drivers of success, consistency, and over/underperformance.
-
----
-
-## 📁 Dataset Overview
-
-The dataset includes:
-- Seasonal statistics for each team (`Pts`, `GF`, `GA`, `Poss`, `CS%`, `PK`, etc.)
-- Match-normalized metrics (e.g., `Pts_per_MP`) for comparability across seasons
-- Final league rankings and match outcomes (wins, draws, losses)
-- Coverage of the 2015–16 to 2023–24 seasons
+This project provides an exploratory data analysis of team performances in France’s Ligue 1 over the last decade. The analysis is conducted season by season and by club, and includes both descriptive statistics and predictive modeling to understand what drives success in the French top division.
 
 ---
 
-## 🔎 1. Comparative Analysis: Long-term Clubs vs. Promoted/Relegated Teams
+## 🧭 Introduction
 
-We compare the average performance of clubs that remained in Ligue 1 throughout the period vs. those that were promoted or relegated.  
-Established clubs exhibit higher averages in points, possession, and defensive stats — revealing structural consistency.
-
----
-
-## 📈 2. Evolution of Ligue 1 Performance Over Time
-
-We track:
-- Season-by-season evolution of goals, points, and possession
-- Club-level trajectories for PSG, Lyon, and Monaco
-- Stability and volatility of league rankings
+This project explores team performance in Ligue 1 from the 2014–2015 season through 2023–2024. The goals are:
+- To identify the statistical patterns and indicators associated with team success.
+- To compare consistently present clubs with promoted/relegated teams.
+- To model the probability of finishing in the Top 3 using team stats.
+- To visualize trends in possession, scoring, and defense.
 
 ---
 
-## 📊 3. Variability of Team Rankings
+## 📁 Project Structure
 
-Using numerical transformation of final rankings (`LgRank`), we compute:
-- Average rank per team
-- Rank standard deviation (stability)
-Low mean + low variance → dominant and consistent teams.
+```
+ligue1-performance-analysis/
+│
+├── data/                         # Contains raw dataset (CSV)
+│   └── ligue-1-stat-15-24.csv
+│
+├── notebooks/                   # Main analysis notebook
+│   └── Project_1_Ligue1_documented.ipynb
+│
+├── figures/                     # Exported visualizations (optional)
+│   └── *.png
+│
+├── README.md                    # Project overview and usage instructions
+├── .gitignore                   # Git tracking exclusion file
+└── LICENSE                      # MIT License for open-source usage
 
----
-
-## ⚔️ 4. Statistical Comparison of Clubs
-
-- Average stats over the full period (e.g., possession, clean sheets)
-- Radar charts to compare multi-dimensional team profiles
-
-All stats were normalized to allow fair comparison.
-
----
-
-## 🔁 5. Correlation Analysis
-
-We explore relationships such as:
-- Possession vs. Points
-- Goals scored vs. Points
-- Clean Sheets vs. Final Rank
-
-A heatmap reveals the strongest performance correlations.
+```
 
 ---
 
-## 🧠 6. Success Factors and Top 3 Prediction
+## 🚀 Usage Instructions
 
-Classification models tested:
-- Logistic Regression
-- Decision Tree
-- Random Forest
+To reproduce the analysis:
 
-Main predictive features: `GF_per_MP`, `CS%`, and `Poss`.
+1. Clone the repository:
+```bash
+git clone https://github.com/AntoineLonguevre/ligue1-performance-analysis.git
+cd ligue1-performance-analysis
+```
 
----
+2. Install the required Python libraries (if not already available):
+```bash
+pip install -r requirements.txt
+```
 
-## 📈 7. Modeled Ranking & Surprises
+3. Open the Jupyter Notebook:
+```bash
+jupyter notebook notebooks/Project_1_Ligue1_documented.ipynb
+```
 
-We generate Top 3 probability scores per club-season.  
-This helps identify:
-- Overperformers (e.g., Monaco 2016–17, Lille 2020–21)
-- Underperformers by model expectation (e.g., Rennes 2021-22, Marseille 2017-18)
-
-
----
-
-## 🧪 8. Offensive and Defensive Efficiency
-
-We construct normalized metrics:
-- Offensive Efficiency = (GF − PK) / Possession
-- Defensive Efficiency = CS% / GA_per_MP
-
-Combined to create a total performance score.
+4. Run the notebook step by step. It includes all data loading, cleaning, visualizations, and model training.
 
 ---
 
-## 🎯 9. Penalty Analysis
+## 📊 Key Outputs and Visualizations
 
-We examine:
-- Penalty frequency and conversion rate
-- Share of total goals from penalties (`PK / GF`)
-Some teams rely heavily on penalties to score.
+Here are some of the visual deliverables and insights included:
+
+- 📈 **Points per match evolution** by club type (always present vs. promoted).### 📈 Points per Match: Stable Clubs vs Promoted/Relegated Teams
+
+This plot highlights the structural gap in performance between clubs that remained in Ligue 1 throughout the decade and those that were promoted or relegated.
+
+![Points per game comparison](figures/points_by_club_type.png)
+
+- 📉 **Goal difference trends**, penalty dependency, and club efficiency profiles.
+- ### 🎯 Predicting Top 3 Finishes – Random Forest
+
+The model assigns a probability of finishing in the Top 3 to every team-season based on performance stats. Some surprises emerge, like underestimation of Lille 20-21 or Monaco 16-17.
+
+![Top 3 RF Ranking](figures/top3_probability_ranking.png)
+
+- ### 🧠 Team Profiles: Radar Comparison (PSG, Lyon, Monaco...)
+
+Radar charts show performance on key dimensions (goals scored/conceded, possession, clean sheets). PSG dominates across the board, while other top teams show more varied profiles.
+
+![Radar PSG](figures/radar_psg.png)
+
+- ### ⚖️ Efficiency Grid: Offensive vs Defensive Strength
+
+This scatterplot combines normalized offensive and defensive indicators. It reveals teams that are strong in both areas — or unbalanced.
+
+![Efficiency grid](figures/offense_vs_defense.png)
+
+- ### 🎯 Penalty Dependency Ratio
+
+Which teams rely most on penalties for their goal scoring? This metric helps identify tactical trends or weaknesses in open play.
+
+![PK dependency](figures/penalty_dependency.png)
 
 ---
 
-## ✅ Conclusion & Future Work
+## 🧠 Conclusion
 
-This project revealed key performance drivers in Ligue 1 and built a statistical basis for modeling future outcomes.
+The analysis highlighted:
+- The consistent dominance of PSG across all metrics.
+- The emergence of Lens and Lille as efficient performers.
+- That possession alone is not a sufficient predictor of success.
+- That goals for, goals against, and clean sheets are the most impactful stats.
 
-Possible next steps:
-- Match-level analysis
-- Full-season simulation (e.g., Monaco 2019–20)
-- Dashboard or API for interactive insights
+This project sets the stage for deeper season simulations and interactive dashboards.
 
 ---
 
-## 📘 Variable Glossary
+## ✍️ Author
+Antoine Longuevre  
+Feel free to contribute or suggest improvements via GitHub Issues or Pull Requests.
 
-| Variable   | Description |
-|------------|-------------|
-| `Rk`       | Row index (changes with sorting) |
-| `Season`   | Football season |
-| `Comp`     | Competition name |
-| `MP`       | Matches Played |
-| `W/D/L`    | Wins / Draws / Losses |
-| `Pts`      | Points (3 per win, 1 per draw) |
-| `Pts/MP`   | Points per Match |
-| `LgRank`   | Final League Rank |
-| `GF`       | Goals For |
-| `GA`       | Goals Against |
-| `GD`       | Goal Difference |
-| `Poss`     | Possession (%) |
-| `CS`       | Clean Sheets |
-| `CS%`      | Clean Sheet Percentage |
-| `G-PK`     | Non-Penalty Goals |
-| `PK`       | Penalty Kicks Made |
-| `PKatt`    | Penalty Kicks Attempted |
-| `PKm`      | Penalty Kicks Missed |
-| `Subs`     | Games played as substitute |
-| `Min`      | Total minutes played |
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](./LICENSE).  
+You are free to use, modify, and distribute this code with proper attribution.
+
 
